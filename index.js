@@ -55,7 +55,7 @@ function fastifyBankai (fastify, opts, next) {
     })
   }
 
-  fastify.get(`${prefix}/:file`, (req, reply) => {
+  fastify.get(`${prefix}/:hash/:file`, (req, reply) => {
     const [file, ext] = req.params.file.split('.')
     switch (ext) {
       case 'html':
